@@ -1,0 +1,32 @@
+header{
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.stars, .twin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+.stars{
+    background: black url('.stars.png') top center;
+    z-index: 0;
+}
+.twin{
+    background: url('.dr.png') top center;
+    z-index: 1;
+    animation: star 300s infinite linear;
+}
+@keyframes star { 
+    0% {
+        background-position: 0 0;
+    }
+    to{
+        background-position: -10000px 5000px;
+    }
+}
