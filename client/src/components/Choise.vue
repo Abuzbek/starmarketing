@@ -1,31 +1,9 @@
 <template>
     <v-container fluid class="pad_none">
         <v-row>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Smm</h2>
+            <v-col v-for="(n,i) in item" :key="n.title" :name="i" cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
+                <h2>{{ n.title }}</h2>
             </v-col>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Dizayn Marketing</h2>
-            </v-col>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Seo optimizatsiya</h2>
-            </v-col>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Marketing</h2>
-            </v-col>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Web dasturlash</h2>
-            </v-col>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Telegram botlar</h2>
-            </v-col>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Video syomka va montaj</h2>
-            </v-col>
-            <v-col cols="6" lg="3" md="4" sm="6" xs="6" class="back" >
-                <h2>Pr xizmatlari</h2>
-            </v-col>
-
         </v-row>
     </v-container>
 </template>
@@ -33,6 +11,16 @@
   export default {
     name: 'Choise',
     data: () => ({
+        item:[
+           {title:'SMM'},
+           {title:'Dizayn Marketing'},
+           {title:'Seo optimizatsiya'},
+           {title:'Marketing'},
+           {title:'Web dasturlash'},
+           {title:'Telegram botlar'},
+           {title:'Video syomka va montaj'},
+           {title:'Pr xizmatlari'},
+        ]
     }),
   }
 </script>
@@ -55,5 +43,10 @@
         padding-top: 0 !important;
         border-top: 1px solid #0077ff;
         background: #040B21;
+    }
+    @media (max-width:500px) {
+      .pad_none{
+          display: none;
+      }
     }
 </style>

@@ -4,7 +4,7 @@
       <v-row >
         <v-col
           cols="12"
-          lg="5"
+          md="5"
         >
           <div class="header_title">
              <h1>STAR MARKETING</h1>
@@ -35,7 +35,7 @@
         </v-col>
         <v-col
           cols="12"
-          lg="7"
+          md="7"
         >
           <img class="header_img" :src="require('../assets/img/header_img.svg')" alt="">
         </v-col>
@@ -96,5 +96,30 @@
       height: auto;
     }
     
+  }
+  @media (max-width:1264px) {
+    img.header_img{
+      display: none;
+    }
+  }
+  @media (max-width:624px) {
+    header{
+      .header_title{
+        h1{
+          font-size: 40px;
+        }
+        h4{
+          font-size: 21px;
+        }
+        p{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  @media (max-width:500px) {
+    header .header_title{
+      align-items: center;
+    }
   }
 </style>
