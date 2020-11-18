@@ -8,6 +8,18 @@
       elevate-on-scroll
     >
       <div class="d-flex align-center">
+        <v-btn
+          class="mx-2 btnToggleMenu"
+          fab
+          dark
+          color="#031133"
+        >
+          <v-icon
+          dark
+          >
+            fas fa-bars
+          </v-icon>
+    </v-btn>
         <v-img
           alt="star Logo"
           class="shrink ml-12 d-none_Logomd"
@@ -26,6 +38,44 @@
         />
       </div>
       <v-spacer></v-spacer>
+      <div class="navbar_drawer">
+        <v-btn
+          data-src="#header"
+          color="transparent"
+          class="ml-6 btnSrc"
+         >
+          Bosh sahifa
+        </v-btn >
+         <v-btn
+          data-src="#tariffs"
+          color="transparent"
+          class="ml-6 btnSrc"
+         >
+          Xizmatlarimiz
+        </v-btn >
+        <v-btn
+          data-src="#team"
+          color="transparent"
+          class="ml-6 btnSrc"
+        >
+          Jamoamiz
+        </v-btn>
+        <v-btn
+          data-src="#customersAbout"
+          color="transparent"
+          class="ml-6 btnSrc"
+        >
+          Sharhlar
+        </v-btn>
+        <v-btn
+          data-src="#contact"
+          color="#CC3333"
+          class="ml-6 mr-12 btnSrc"
+        >
+          Kontakt
+        </v-btn>
+      </div>
+       
     </v-app-bar>
 
     <v-main>
@@ -40,7 +90,7 @@
       <Services/>
       <Customers/>
       <CustomersAbout/>
-      <Team/>
+      <!-- <Team/> -->
       <Contact/>
       <Footer/>
     </v-main>
@@ -59,10 +109,13 @@ import Market from './components/Market';
 import Services from './components/Services';
 import Customers from './components/Customers';
 import CustomersAbout from './components/CustomersAbout';
-import Team from './components/Team';
+// import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import $ from 'jquery'
+ import AOS from 'aos'
+  import  'aos/dist/aos.css'
+ const links = ('.btnSrc');
 
 export default {
   name: 'App',
@@ -72,19 +125,69 @@ export default {
     Design,Mantaj,
     Pr,Market,
     Services,Customers,
-    CustomersAbout,Team,
+    CustomersAbout,
     Contact, Footer
   },
 
   data: () => ({
-    //
+    // 
   }),
+  created(){
+    AOS.init();
+  },
+  mounted () {
+    $('.btnToggleMenu').click(function(){
+      $('.navbar_drawer').slideToggle()
+    })
+    $(links).on('click', function (e) {
+        e.preventDefault();
+        $(links).removeClass('active');
+        $(this).addClass('active');
+        var id = $(this).attr('data-src');
+        var target = $(id).offset().top - 100;
+        $('html, body').animate({
+            scrollTop: target,
+        }, 1000);
+    });
+  }
 };
 </script>
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+  .btnToggleMenu{
+    display: none;
+  }
   .d-none_Logolg{
       display: none ;
+    }
+    .btnSrc{
+      &.active{
+        background: #CC3333 !important;
+      }
+    }
+    @media (max-width:1230px) {
+      .btnToggleMenu{
+        display: block;
+      }
+      .navbar_drawer{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        position: absolute;
+        width: 95%;
+        top: 95px;
+        left: 10px;
+        right: 10px;
+        background:#031133;
+        border-radius: 1em;
+        overflow: hidden;
+        transition: display 1s ,  0.3s opacity  !important;
+        opacity: 1;
+        .btnSrc{
+          margin: 20px;
+        }
+      }
     }
   @media (max-width:450px) {
     .d-none_Logomd{

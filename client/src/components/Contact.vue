@@ -1,8 +1,8 @@
 <template>
-  <section id="services">
+  <section id="contact">
     <v-container>
       <v-row>
-        <v-col cols="12" md="6">
+        <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" cols="12" md="6">
           <h3>Biz bilan bog’laning</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,</p>
           <div class="adress">
@@ -35,7 +35,7 @@
           </div>
           <a href=""></a>
         </v-col>
-        <v-col cols="12" md="6">
+        <v-col data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500" cols="12" md="6">
           <v-card class="contact_card">
             <h2>Contact form</h2>
             <v-text-field
@@ -44,6 +44,8 @@
               label="Ismingiz"
               :rules="rules"
               hide-details="auto"
+              v-model="name"
+
             ></v-text-field>
             <v-text-field
               dark
@@ -51,6 +53,7 @@
               :rules="rules"
               class="input_form"
               hide-details="auto"
+              v-model="number"
             ></v-text-field>
              <v-select
               dark
@@ -58,14 +61,17 @@
               label="Sizni qaysi xizmatlarimiz qiziqtiradi?"
               class="input_form"
               outlined
+              v-model="categories"
             ></v-select>
             <v-textarea
               dark
               outlined
               name="input-7-4"
               label="Bizga yozing"
+              v-model="message"
             ></v-textarea>
             <v-btn
+              @click="submitbtn"
               tile
               color="#CC3333"
               large
@@ -84,20 +90,45 @@
   </section>
 </template>
 <script>
+  import axios from 'axios'
 
   export default {
     name: 'ChooseUse',
     data: () => ({
+      name:'',
+      number:'',
+      categories:'',
+      message:'',
       rules: [
         value => !!value || 'Required.',
         value => (value && value.length >= 3) || 'Min 3 characters',
       ],
       items: ['SMM', 'Dizayn Marketing', 'Seo optimizatsiya', 'Marketing', 'Web dasturlash','Telegram botlar', 'Video syomka va montaj' , 'Pr xizmatlari'],
     }),
+    methods: {
+      submitbtn(){
+        console.log({
+          name: this.name,
+          number: this.number,
+          categories: this.categories,
+          message: this.message
+        });
+        axios.post('/api', {
+          name: this.name,
+          number: this.number,
+          categories: this.categories,
+          message: this.message
+        })
+        this.name = ''
+        this.number = ''
+        this.categories = ''
+        this.message = ""
+      }
+    }
   }
 </script>
 <style lang="scss" scoped>
-  section#services{
+  section#contact{
      padding-top: 80px; 
      text-align: center;
      background: #040B21;
@@ -194,7 +225,7 @@
     }
   }
   @media(max-width:500px){
-    section#services .contact_card{
+    section#contact .contact_card{
       background: #040B21;
       box-shadow: 0px 2px 10px 6px rgba(0, 0, 0, 0.5);
       padding: 30px 15px 20px 15px;

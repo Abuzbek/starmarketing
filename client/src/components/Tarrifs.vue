@@ -352,5 +352,17 @@
     .card_swiper{
       text-align: center;
     }
-  }          
+  }   
+  @media (max-width:400px) {
+    .card_swiper{
+    width: 80%;
+    margin: 10px auto;
+    height: auto;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  }         
 </style>

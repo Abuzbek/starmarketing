@@ -3,10 +3,10 @@
   <v-container>
     <h2>PR xizmati</h2>
     <v-row>
-      <v-col cols="12" md="6">
+      <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700" cols="12" md="6">
         <img :src="require('../assets/img/Group (3).svg')" alt="">
       </v-col>
-      <v-col cols="12" md="6">
+      <v-col data-aos="fade-down" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
         <ul>
           <v-col>
             <li>PR MAQOLALAR YOZISH</li>

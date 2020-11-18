@@ -1,13 +1,13 @@
 <template>
-<header>
+<header id="header">
   <v-container style="position:relative; z-index:2;">
       <v-row >
         <v-col
           cols="12"
           md="5"
         >
-          <div class="header_title">
-             <h1>STAR MARKETING</h1>
+          <div class="header_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
+             <h1 id="quote">STAR MARKETING</h1>
              <h4>DIGITAL COMPANY</h4>
              <p>Emotsiya sotamiz ishonch sotib olamiz! </p>
             <v-btn
@@ -26,7 +26,7 @@
                 />
               Showreel
             </v-btn>
-            <div class="d-flex align-center header_social">
+            <div  class="d-flex align-center header_social">
               <a href="#!"><img :src="require('../assets/img/instagram.svg')" alt=""></a>
               <a href="#!"><img :src="require('../assets/img/facebook.svg')" alt=""></a>
               <a href="#!"><img :src="require('../assets/img/telegram.svg')" alt=""></a>
@@ -37,7 +37,7 @@
           cols="12"
           md="7"
         >
-          <img class="header_img" :src="require('../assets/img/header_img.svg')" alt="">
+          <img data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000" class="header_img" :src="require('../assets/img/header_img.svg')" alt="">
         </v-col>
       </v-row>
   </v-container>

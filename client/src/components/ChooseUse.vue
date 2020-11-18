@@ -3,7 +3,7 @@
     <v-container>
       <h2>NIMA UCHUN BIZNI TANLASHADI ?</h2>
       <v-row>
-          <v-col v-for="(n,i) in card" :key="n._id" :name="i" cols="12" lg="3" md="6">
+          <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="5" v-for="(n,i) in card" :key="n._id" :name="i" cols="12" lg="3" md="6">
             <v-card
               color="transparent"
               class="mx-auto"

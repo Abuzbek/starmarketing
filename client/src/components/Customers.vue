@@ -3,7 +3,7 @@
     <v-container>
       <h2>Mijozlarimiz</h2>
       <v-row>
-        <v-col v-for="(n,i) in card" :key="n.img" cols="6" lg="2" md="3" sm="4">
+        <v-col data-aos="slide-up" data-aos-duration="1500" data-aos-delay="1000" class="col" v-for="(n,i) in card" :key="n.img" cols="4" lg="2" md="3" sm="4" :class="n.class">
           <img :src="n.img" :alt="i">
         </v-col>
       </v-row>
@@ -11,10 +11,16 @@
   </section>
 </template>
 <script>
-  import img1 from "../assets/img/image 30.png";
-  import img2 from "../assets/img/image 31.png";
-  import img3 from "../assets/img/Vector1.png";
-
+  import img1 from "../assets/logo/beileve.png";
+  import img2 from "../assets/logo/BAYNA_.png";
+  import img3 from "../assets/logo/Avlod21.png";
+  import img4 from "../assets/logo/cloud logo.png";
+  import img5 from "../assets/logo/Dilmurod_style.png";
+  import img6 from "../assets/logo/eko zamin.png";
+  import img7 from "../assets/logo/logo (2).png";
+  import img8 from "../assets/logo/mashhura.png";
+  // import $ from 'jquery'
+  
   export default {
     
     name: 'ChooseUse',
@@ -22,7 +28,7 @@
       card:[
         {
           _id:'1',
-          img: img1,
+          img: img4,
         },
         {
           _id:'2',
@@ -38,19 +44,19 @@
         },
         {
           _id:'2',
-          img: img2,
+          img: img5,
         },
         {
           _id:'3',
-          img: img3,
+          img: img6,
         },
         {
           _id:'1',
-          img: img1,
+          img: img7,
         },
         {
           _id:'2',
-          img: img2,
+          img: img8,
         },
         {
           _id:'3',
@@ -90,7 +96,15 @@
      }
      img{
        margin-bottom: 80px;
+       max-width:100%;
+       height: auto;
      }
+     .col{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+     
   }
    @media (max-width:500px) {
     section#services{
