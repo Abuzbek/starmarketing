@@ -3,7 +3,7 @@
   <v-container>
     <v-row>
       <v-col style="text-align:center;" cols="12" md="6">
-        <img :src="Logo" alt="">
+        <img style="max-width:100%;height:auto;" :src="Logo" alt="">
         <p>Emotsiya sotamiz ishonch sotib olamiz!</p>
       </v-col>
       <v-col cols="12" md="6">

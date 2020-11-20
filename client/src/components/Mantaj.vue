@@ -8,7 +8,7 @@
   <v-container>
     <h2>Video syomka va montaj </h2>
     <v-row>
-      <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700" cols="12" md="6">
+      <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
         <ul>
           <v-col>
             <li>Video syomka</li>
@@ -20,7 +20,7 @@
           </v-col>
         </ul>
       </v-col>
-      <v-col data-aos="fade-down" data-aos-duration="1500" data-aos-delay="700" cols="12" md="6">
+      <v-col data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400" cols="12" md="6">
         <img :src="require('../assets/img/Group (2).svg')" alt="">
       </v-col>
     </v-row>

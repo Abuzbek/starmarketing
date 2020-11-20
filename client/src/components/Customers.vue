@@ -3,7 +3,7 @@
     <v-container>
       <h2>Mijozlarimiz</h2>
       <v-row>
-        <v-col data-aos="slide-up" data-aos-duration="1500" data-aos-delay="1000" class="col" v-for="(n,i) in card" :key="n.img" cols="4" lg="2" md="3" sm="4" :class="n.class">
+        <v-col data-aos="slide-up" data-aos-duration="1500" data-aos-delay="300" class="col" v-for="(n,i) in card" :key="n.img" cols="4" lg="2" md="3" sm="4" :class="n.class">
           <img :src="n.img" :alt="i">
         </v-col>
       </v-row>
@@ -84,7 +84,6 @@
      text-align: center;
      background: #040B21;
      background-size: cover;
-     box-shadow: inset 0px 8px 7px rgba(0, 0, 0, 0.5);
      h2{
        font-family: 'Montserrat';
       font-style: normal;
@@ -95,8 +94,8 @@
       margin-bottom: 75px;
      }
      img{
-       margin-bottom: 80px;
-       max-width:100%;
+       margin:0 auto 80px auto;
+       max-width:80%;
        height: auto;
      }
      .col{

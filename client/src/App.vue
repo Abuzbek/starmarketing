@@ -39,7 +39,7 @@
       </div>
       <v-spacer></v-spacer>
       <div class="navbar_drawer">
-        <v-btn
+          <v-btn
           data-src="#header"
           color="transparent"
           class="ml-6 btnSrc"
@@ -53,13 +53,6 @@
          >
           Xizmatlarimiz
         </v-btn >
-        <v-btn
-          data-src="#team"
-          color="transparent"
-          class="ml-6 btnSrc"
-        >
-          Jamoamiz
-        </v-btn>
         <v-btn
           data-src="#customersAbout"
           color="transparent"
@@ -137,7 +130,8 @@ export default {
   },
   mounted () {
     $('.btnToggleMenu').click(function(){
-      $('.navbar_drawer').slideToggle()
+        $('.navbar_drawer').slideToggle()
+      
     })
     $(links).on('click', function (e) {
         e.preventDefault();
@@ -165,11 +159,15 @@ export default {
         background: #CC3333 !important;
       }
     }
+    .btnSrc{
+      box-shadow: none !important;
+    }
     @media (max-width:1230px) {
       .btnToggleMenu{
         display: block;
       }
       .navbar_drawer{
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: start;
@@ -186,6 +184,7 @@ export default {
         opacity: 1;
         .btnSrc{
           margin: 20px;
+          box-shadow: none !important;
         }
       }
     }

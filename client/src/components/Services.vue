@@ -60,7 +60,6 @@
      text-align: center;
      background: #031133;
      background-size: cover;
-     box-shadow: inset 0px 8px 7px rgba(0, 0, 0, 0.5);
      .card_service{
        display: flex;
        flex-direction: column;

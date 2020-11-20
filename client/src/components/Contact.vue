@@ -133,7 +133,6 @@
      text-align: center;
      background: #040B21;
      background-size: cover;
-     box-shadow: inset 0px 8px 7px rgba(0, 0, 0, 0.5);
      h3{
        font-family: 'Montserrat';
        font-style: normal;

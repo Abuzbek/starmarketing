@@ -6,7 +6,7 @@
           cols="12"
           md="5"
         >
-          <div class="header_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
+          <div class="header_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
              <h1 id="quote">STAR MARKETING</h1>
              <h4>DIGITAL COMPANY</h4>
              <p>Emotsiya sotamiz ishonch sotib olamiz! </p>
@@ -37,7 +37,7 @@
           cols="12"
           md="7"
         >
-          <img data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000" class="header_img" :src="require('../assets/img/header_img.svg')" alt="">
+          <img data-aos="fade-down" data-aos-duration="1500" data-aos-delay="300" class="header_img" :src="require('../assets/img/header_img.svg')" alt="">
         </v-col>
       </v-row>
   </v-container>

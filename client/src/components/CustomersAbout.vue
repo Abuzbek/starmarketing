@@ -102,7 +102,6 @@
     section#customersAbout{
         background: #040B21 url('../assets/img/bg.svg') no-repeat center center / cover ;
         position: relative;
-        box-shadow: inset 0px -8px 7px rgba(0, 0, 0, 0.5);
         padding: 80px 0;
          h2{
             font-family: "Montserrat";

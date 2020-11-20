@@ -3,7 +3,7 @@
   <v-container>
     <h2>Marketing</h2>
     <v-row>
-      <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700" cols="12" md="6">
+      <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
         <ul>
           <v-col>
             <li>MARKETING STRATEGIYALARI UCHUN <br> YORDAM </li>
