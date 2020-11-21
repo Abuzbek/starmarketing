@@ -60,7 +60,7 @@
   section#choose{
      padding: 80px 0; 
      text-align: center;
-     background: url('../assets/img/sectionBg.jpg') no-repeat center center ;
+     background: #040b21 url('../assets/img/headerBg.png') no-repeat center 81px fixed;
      background-size: cover;
      filter: grayscale(50%);
      h2{

@@ -15,24 +15,24 @@
           <swiper class="swiper d-none_md" :options="swiperOption">
             <swiper-slide v-for="(n,i) in cardSwiper" :key="n._id" :name="i">
                 <v-card
-                 shaped
                  class="card_swiper"
                  color="#040B21"
                  :style="n.boxShadow"
+                 style="border-radius:6px;"
                 >
                     <div class="topCard d-flex justify-center flex-column align-center   ">
                         <h4 :style="'color:'+n.colorText">{{ n.title }}</h4>
                         <ul>
-                            <li>{{n.ulLi.one}}</li>
-                            <li>{{n.ulLi.two}}</li>
-                            <li>{{n.ulLi.tree}}</li>
-                            <li>{{n.ulLi.four}}</li>
-                            <li v-if="n.ulLi.five">{{n.ulLi.five}}</li>
-                            <li v-if="n.ulLi.six">{{n.ulLi.six}}</li>
-                            <li v-if="n.ulLi.seven">{{n.ulLi.seven}}</li>
-                            <li v-if="n.ulLi.eight">{{n.ulLi.eight}}</li>
-                            <li v-if="n.ulLi.nine">{{n.ulLi.nine}}</li>
-                            <li v-if="n.ulLi.ten">{{n.ulLi.ten}}</li>
+                            <li> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.one}}</span> </li>
+                            <li> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.two}}</span> </li>
+                            <li> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.tree}}</span> </li>
+                            <li> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.four}}</span> </li>
+                            <li v-if="n.ulLi.five"> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.five}}</span> </li>
+                            <li v-if="n.ulLi.six"> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.six}}</span> </li>
+                            <li v-if="n.ulLi.seven"> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.seven}}</span> </li>
+                            <li v-if="n.ulLi.eight"> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.eight}}</span> </li>
+                            <li v-if="n.ulLi.nine"> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.nine}}</span> </li>
+                            <li v-if="n.ulLi.ten"> <img :src="require('../assets/img/Vector.png')" alt=""> <span>{{n.ulLi.ten}}</span> </li>
                         </ul>
                     </div>
                     <div class="bottomCard">
@@ -160,8 +160,12 @@
           slidesPerView: 3,
           spaceBetween: 30,
           breakpoints: {
-            1024: {
+            1440: {
               slidesPerView: 3,
+              spaceBetween: 30
+            },
+            1024: {
+              slidesPerView: 2,
               spaceBetween: 30
             },
             768: {
@@ -169,7 +173,7 @@
               spaceBetween: 30
             },
             640: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 20
             },
             320: {
@@ -212,7 +216,7 @@
             padding: 0 40px;
             .swiper-slide {
                 .card_swiper{
-                    width: 80%;
+                    width: 65%;
                     margin: 10px auto;
                     height: 580px;
                     padding: 30px;
@@ -260,6 +264,10 @@
                    background: #CC3333;
                    border-radius: 4px;
                    transform: translateX(-10px);
+                   &::after{
+                     font-size: 22px;
+                     font-weight: 900;
+                   }
                }
                .swiper-button-next{
                    width: 60px;
@@ -268,6 +276,13 @@
                    background: #CC3333;
                    border-radius: 4px;
                    transform: translateX(10px);
+                   &::after{
+                     font-size: 22px;
+                     font-weight: 900;
+                   }
+               }
+               .swiper-button-disabled{
+                 display: none;
                }
             }
             .d-none_lg{
@@ -275,7 +290,7 @@
             }
         }
          .card_swiper{
-          width: 80%;
+          width: 65%;
           margin: 10px auto;
           height: auto;
           padding: 30px;
@@ -294,7 +309,9 @@
           ul{
             margin-bottom: 20px;
               li{
-                  list-style-image: url('../assets/img/Vector.png');
+                  display: flex;
+                  justify-content: start;
+                  align-items: center;
                   font-family: "Ubuntu";
                   font-style: normal;
                   font-weight: normal;
@@ -302,6 +319,11 @@
                   line-height: 21px;
                   margin-bottom: 20px;
                   color: #FFFFFF;
+                  img{
+                    max-width: 100%;
+                    height: 100%;
+                    margin-right: 20px;
+                  }
               }
           }
           p{

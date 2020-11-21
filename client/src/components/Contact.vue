@@ -86,7 +86,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <div style="position:relative;overflow:hidden;"><a href="https://yandex.uz/maps/10335/tashkent/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ташкент</a><a href="https://yandex.uz/maps/10335/tashkent/?ll=69.215268%2C41.352830&mode=whatshere&utm_medium=mapframe&utm_source=maps&whatshere%5Bpoint%5D=69.216200%2C41.352678&whatshere%5Bzoom%5D=17&z=17.4" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — поиск мест и адресов, городской транспорт</a><iframe src="https://yandex.uz/map-widget/v1/-/CCUAyGByCB" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1827.3821154004!2d69.20387208232754!3d41.339734567895555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c05596f7ab3%3A0xf6cbeeef8bc55d95!2z0JzQsNGI0YXRg9GA0LA!5e1!3m2!1sru!2s!4v1605964438005!5m2!1sru!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </section>
 </template>
 <script>

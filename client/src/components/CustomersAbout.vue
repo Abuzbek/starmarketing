@@ -9,7 +9,6 @@
           <swiper class="swiper" :options="swiperOption">
             <swiper-slide v-for="(n,i) in cardSwiper" :key="n._id" :name="i">
                 <v-card
-                 shaped
                  class="card_swiper"
                 >
                   <h4>{{ n.title }}</h4>
@@ -100,7 +99,7 @@
 </script>
 <style lang="scss">
     section#customersAbout{
-        background: #040B21 url('../assets/img/bg.svg') no-repeat center center / cover ;
+        background: #031133 url('../assets/img/bg.svg') no-repeat center center / cover ;
         position: relative;
         padding: 80px 0;
          h2{

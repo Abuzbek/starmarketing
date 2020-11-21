@@ -22,15 +22,17 @@
     </v-btn>
         <v-img
           alt="star Logo"
-          class="shrink ml-12 d-none_Logomd"
+          class="shrink ml-12 logoHeader d-none_Logomd btnSrc"
           contain
+          data-src="#header"
           :src="require('./assets/images/loggooo 1.svg')"
           transition="scale-transition"
           height="64px"
         />
         <v-img
           alt="star Logo"
-          class="shrink ml-4 d-none_Logolg"
+          class="shrink ml-4 logoHeader d-none_Logolg btnSrc"
+          data-src="#header"
           contain
           :src="require('./assets/images/logo.png')"
           transition="scale-transition"
@@ -39,13 +41,7 @@
       </div>
       <v-spacer></v-spacer>
       <div class="navbar_drawer">
-          <v-btn
-          data-src="#header"
-          color="transparent"
-          class="ml-6 btnSrc"
-         >
-          Bosh sahifa
-        </v-btn >
+        <div>
          <v-btn
           data-src="#tariffs"
           color="transparent"
@@ -53,6 +49,13 @@
          >
           Xizmatlarimiz
         </v-btn >
+        <v-btn
+          data-src="#customers"
+          color="transparent"
+          class="ml-6 btnSrc"
+        >
+          Mijozlarimiz
+        </v-btn>
         <v-btn
           data-src="#customersAbout"
           color="transparent"
@@ -62,11 +65,13 @@
         </v-btn>
         <v-btn
           data-src="#contact"
-          color="#CC3333"
-          class="ml-6 mr-12 btnSrc"
+          color="transparent"
+          class="ml-6 mr-12 btnSrc active"
         >
           Kontakt
         </v-btn>
+        </div>
+          
       </div>
        
     </v-app-bar>
@@ -138,7 +143,7 @@ export default {
         $(links).removeClass('active');
         $(this).addClass('active');
         var id = $(this).attr('data-src');
-        var target = $(id).offset().top - 100;
+        var target = $(id).offset().top - 90;
         $('html, body').animate({
             scrollTop: target,
         }, 1000);
@@ -152,26 +157,35 @@ export default {
     display: none;
   }
   .d-none_Logolg{
-      display: none ;
-    }
-    .btnSrc{
+    display: none ;
+  }
+  .btnSrc{
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    text-transform: capitalize;
+    &.logoHeader{
+      cursor: pointer;
       &.active{
-        background: #CC3333 !important;
+        background: transparent !important;
       }
     }
-    .btnSrc{
-      box-shadow: none !important;
+    &.active{
+      background: #CC3333 !important;
     }
+  }
+  .btnSrc{
+    box-shadow: none !important;
+  }
+  .navbar_drawer{
+    display: block;
+  }
     @media (max-width:1230px) {
       .btnToggleMenu{
         display: block;
       }
       .navbar_drawer{
+        display: none;
         height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
         position: absolute;
         width: 95%;
         top: 95px;
@@ -182,10 +196,18 @@ export default {
         overflow: hidden;
         transition: display 1s ,  0.3s opacity  !important;
         opacity: 1;
-        .btnSrc{
-          margin: 20px;
-          box-shadow: none !important;
+        div{
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          flex-direction: column;
+          .btnSrc{
+            margin: 20px;
+            box-shadow: none !important;
+            font-size: 20px;
+          }
         }
+        
       }
     }
   @media (max-width:450px) {

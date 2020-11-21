@@ -34,14 +34,9 @@
         padding-bottom: 36px;
         transition: 0.5s;
     }
-    .back:hover{
-        background: rgba(0, 51, 153, 0.3);
-        transition: 0.5s;
-    }
     .pad_none{
         padding-bottom: 0 !important; 
         padding-top: 0 !important;
-        border-top: 1px solid #0077ff;
         background: #040B21;
     }
     @media (max-width:500px) {

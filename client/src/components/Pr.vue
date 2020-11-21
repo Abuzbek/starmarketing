@@ -36,9 +36,9 @@
 </script>
 <style lang="scss" scoped>
     section#design{
-      background: #031133 ;
+      background: #040B21 url('../assets/Rectangle 27.png') no-repeat center center / cover;
       position: relative;
-      padding-top: 80px;
+      padding-top: 120px;
       padding-bottom: 120px;
       h2{
         font-family: "Montserrat";

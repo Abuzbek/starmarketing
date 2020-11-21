@@ -16,7 +16,7 @@
               large
               dark
               style="font-family: 'Ubuntu',
-              sans-serif;font-weight:300;"
+              sans-serif;font-weight:300; padding:0 30px;"
               class="rounded-lg"
             >
                 <v-img
@@ -120,6 +120,8 @@
   @media (max-width:500px) {
     header .header_title{
       align-items: center;
+      text-align: center;
     }
+    
   }
 </style>

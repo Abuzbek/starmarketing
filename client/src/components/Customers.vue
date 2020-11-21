@@ -1,5 +1,5 @@
 <template>
-  <section id="services">
+  <section id="customers">
     <v-container>
       <h2>Mijozlarimiz</h2>
       <v-row>
@@ -79,7 +79,7 @@
   }
 </script>
 <style lang="scss" scoped>
-  section#services{
+  section#customers{
      padding: 80px 0; 
      text-align: center;
      background: #040B21;
@@ -106,7 +106,7 @@
      
   }
    @media (max-width:500px) {
-    section#services{
+    section#customers{
       text-align: center;
     }
   }
