@@ -87,7 +87,14 @@
       @media (max-width:500px) {
         section#design ul {
           margin-top:20px;
+          li{
+            justify-content: center;
+            img{
+              display: none;
+            }
+          }
         }
+        
         section#design{
           text-align: center;
         }

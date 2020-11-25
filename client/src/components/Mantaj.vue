@@ -36,8 +36,8 @@
       background: #040B21 ;
       box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.5);
       position: relative;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 30px;
+      padding-bottom: 20px;
       h2{
         font-family: "Montserrat";
         font-style: normal;
@@ -54,6 +54,7 @@
         height: 80%;
       }
       ul{
+        margin-top: 40px;
         li{
             display: flex;
             justify-content: start;
@@ -66,7 +67,6 @@
             margin-bottom: 30px;
             color: #FFFFFF;
             span.spanIn{
-              margin-left: 150px;
               display: flex;
               align-items: center;
               img{
@@ -79,9 +79,24 @@
         }
       }
       }
+      @media (max-width:1265px) {
+        section#design ul li span.spanIn{
+          margin-left: 30px;
+        }
+      }
       @media (max-width:600px) {
         section#design ul{
           margin-top:20px;
+          padding-left: 0;
+          li{
+            justify-content: center;
+            .spanIn{
+              margin-left: 0;
+              img{
+                display: none;
+              }
+            }
+          }
         }
       }
       @media (max-width:500px) {

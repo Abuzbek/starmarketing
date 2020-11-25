@@ -370,6 +370,7 @@
   @media (max-width:500px) {
     .card_swiper ul li{
       list-style: none;
+      justify-content: center;
     }
     .card_swiper{
       text-align: center;

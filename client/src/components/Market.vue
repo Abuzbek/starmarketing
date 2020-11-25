@@ -6,10 +6,12 @@
       <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
         <ul>
           <v-col>
-            <li>MARKETING STRATEGIYALARI UCHUN <br> YORDAM </li>
-            <li>SOTUV BO’LIMI SISTEMASI VA <br> SOTUVCHILARNI O’QITISH DASTURI </li>
-            <li>LEADLAR TAYYORLASH VA ULARDAN <br> SAMARALI FOYDA OLISH </li>
-            <li>SOTUV STRATEGIYASI VA EFFEKTIV <br> REKLAMALAR YARATISH </li>
+            <li><span class="spanIn"><img :src="require('../assets/img/Vector.svg')" alt=""><span>Pr maqolalar yozish</span></span></li>
+            <li><span class="spanIn"><img :src="require('../assets/img/Vector.svg')" alt=""><span>Marketing strategiyalari  uchun  <br> yordam </span></span></li>
+            <li><span class="spanIn"><img :src="require('../assets/img/Vector.svg')" alt=""><span>Sotuv bo’limi sistemasi va <br> sotuvchilarni o’qitish dasturi  </span></span></li>
+            <li></li>
+            <li><span class="spanIn"><img :src="require('../assets/img/Vector.svg')" alt=""><span>Leadlar tayyorlash va ulardan <br> samarali foyda olish </span></span></li>
+            <li><span class="spanIn"><img :src="require('../assets/img/Vector.svg')" alt=""><span>Sotuv strategiyasi va effektiv <br> reklamalar yaratish </span></span></li>
           </v-col>
         </ul>
       </v-col>
@@ -51,24 +53,44 @@
         height: 80%;
       }
       ul{
-        margin-top: 100px;
+        margin-top: 40px;
         li{
-          font-family: 'Ubuntu';
-          font-style: normal;
-          font-weight: normal;
-          font-size: 24px;
-          line-height: 28px;
-          /* identical to box height */
-          color: #FFFFFF;
-          margin-bottom: 30px;
-          list-style-image: url('../assets/img/Vector.png');
-          list-style-position: 10px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            font-family: "Ubuntu";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 21px;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+            span.spanIn{
+              margin-left: 150px;
+              display: flex;
+              align-items: center;
+              img{
+                max-width: 30px;
+                height: 30px;
+                margin-right: 30px;
+              } 
+            }
+            
         }
       }
       }
       @media (max-width:600px) {
         section#market ul{
           margin-top:20px;
+          li{
+            justify-content: center;
+            .spanIn{
+              margin-left: 0 !important;
+              img{
+                display: none;
+              }
+            }
+          }
         }
       }
       @media (max-width:500px) {
