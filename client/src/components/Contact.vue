@@ -4,14 +4,14 @@
       <v-row>
         <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" cols="12" md="6">
           <h3>Biz bilan bog’laning</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,</p>
+          <p>Emotsiya sotamiz ishonch sotib olamiz!</p>
           <div class="adress">
             <img :src="require('../assets/img/adress.svg')" alt="">
             Manzil
           </div>
            <div class="phone">
             <a href="">
-             Yunusobod 3/4 Beruniy metrosi
+             Shayxontohur tumani Beruniy metrosi
            </a>
           </div>
           <div class="adress">
@@ -19,17 +19,17 @@
             Telefon
           </div>
           <div class="phone">
-            <a href="">+998 99 998 99 88</a>
-            <a href="">+998 99 998 88 99</a>
+             <a href="tel:+998 99 092 97 32">+998 99 092 97 32</a>
+              <a href="tel:+998 33 160 01 80">+998 33 160 01 80</a>
           </div>
           <div class="social d-flex align-center ">
-            <a href="">
+            <a href="https://www.instagram.com/starproductionuz/">
               <img :src="require('../assets/img/instagram.svg')" alt="">
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/Start-Marketing-Digital-Company-103463551590128">
               <img :src="require('../assets/img/facebook.svg')" alt="">
             </a>
-            <a href="">
+            <a href="https://t.me/smm_starmarketing">
               <img :src="require('../assets/img/telegram.svg')" alt="">
             </a>
           </div>
@@ -86,7 +86,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1827.3821154004!2d69.20387208232754!3d41.339734567895555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c05596f7ab3%3A0xf6cbeeef8bc55d95!2z0JzQsNGI0YXRg9GA0LA!5e1!3m2!1sru!2s!4v1605964438005!5m2!1sru!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11982.58843740213!2d69.2104013862915!3d41.33828640280658!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b28c283edeb9cd4!2sAvlod21!5e0!3m2!1sru!2s!4v1607070478935!5m2!1sru!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </section>
 </template>
 <script>
@@ -96,7 +96,7 @@
     name: 'ChooseUse',
     data: () => ({
       name:'',
-      number:'',
+      number:'+998',
       categories:'',
       message:'',
       rules: [
@@ -123,6 +123,7 @@
         this.number = ''
         this.categories = ''
         this.message = ""
+        window.location.reload()
       }
     }
   }
@@ -131,7 +132,7 @@
   section#contact{
      padding-top: 80px; 
      text-align: center;
-     background: #040B21;
+     background: #031133;
      background-size: cover;
      h3{
        font-family: 'Montserrat';
@@ -203,11 +204,11 @@
        }
      }
     .contact_card{
-      background: #040B21;
+      background: #031133;
       box-shadow: 0px 2px 10px 6px rgba(0, 0, 0, 0.5);
       padding: 30px 65px 20px 65px;
       max-width: 540px;
-      margin: auto;
+      margin:0 auto 50px auto;
       h2{
         font-family: 'Montserrat';
         font-style: normal;
@@ -222,6 +223,10 @@
         
       }
     }
+  }
+  iframe{
+    background: #031133;
+    opacity: 0.5;
   }
   @media(max-width:500px){
     section#contact .contact_card{

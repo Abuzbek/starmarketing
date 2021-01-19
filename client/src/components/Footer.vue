@@ -10,18 +10,18 @@
         <v-row>
           <v-col cols="12" md="6">
             <a href="#!" class="map">
-              Yunusobod 3/4
+               Shayxontohur tumani
               <br>
               Beruniy metrosi
             </a>
           </v-col>
           <v-col cols="12" md="6">
-            <a href="tel:+998 99 998 99 88">+998 99 998 99 88</a>
-            <a href="tel:+998 99 998 99 88">+998 99 998 99 88</a>
+            <a href="tel:+998 99 092 97 32">+998 99 092 97 32</a>
+            <a href="tel:+998 33 160 01 80">+998 33 160 01 80</a>
             <div class="d-flex align-center justify-center header_social">
-              <a href="#!"><img :src="require('../assets/img/instagram.svg')" alt=""></a>
-              <a href="#!"><img :src="require('../assets/img/facebook.svg')" alt=""></a>
-              <a href="#!"><img :src="require('../assets/img/telegram.svg')" alt=""></a>
+              <a href="https://www.instagram.com/starproductionuz/"><img :src="require('../assets/img/instagram.svg')" alt=""></a>
+              <a href="https://www.facebook.com/Start-Marketing-Digital-Company-103463551590128"><img :src="require('../assets/img/facebook.svg')" alt=""></a>
+              <a href="https://t.me/smm_starmarketing"><img :src="require('../assets/img/telegram.svg')" alt=""></a>
             </div>
           </v-col>
         </v-row>

@@ -3,7 +3,7 @@
   <v-container>
     <h2>Grafik dizayn</h2>
     <v-row>
-      <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
+      <v-col class="d-flex justify-center align-center" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
         <img :src="require('../assets/img/Group (1).svg')" alt="">
       </v-col>
       <v-col data-aos="fade-down" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
@@ -73,7 +73,6 @@
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
-            line-height: 21px;
             margin-bottom: 30px;
             color: #FFFFFF;
             img{
@@ -83,6 +82,27 @@
             }
         }
       }
+      }
+      @media(max-width:959px){
+        section#design ul {
+            li{
+              margin-left: 150px;
+            }
+          }
+      }
+      @media (max-width:700px) {
+        section#design ul{
+          li{
+            margin-left: 70px !important;
+          }
+        }
+      }
+      @media(max-width:600px){
+        section#design ul {
+            li{
+              margin-left: 0px;
+            }
+          }
       }
       @media (max-width:500px) {
         section#design ul {

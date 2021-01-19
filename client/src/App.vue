@@ -57,13 +57,6 @@
           Mijozlarimiz
         </v-btn>
         <v-btn
-          data-src="#customersAbout"
-          color="transparent"
-          class="ml-6 btnSrc"
-        >
-          Sharhlar
-        </v-btn>
-        <v-btn
           data-src="#contact"
           color="transparent"
           class="ml-6 mr-12 btnSrc active"
@@ -71,7 +64,6 @@
           Kontakt
         </v-btn>
         </div>
-          
       </div>
        
     </v-app-bar>
@@ -87,7 +79,6 @@
       <Market/>
       <Services/>
       <Customers/>
-      <CustomersAbout/>
       <!-- <Team/> -->
       <Contact/>
       <Footer/>
@@ -106,7 +97,6 @@ import Pr from './components/Pr';
 import Market from './components/Market';
 import Services from './components/Services';
 import Customers from './components/Customers';
-import CustomersAbout from './components/CustomersAbout';
 // import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -123,7 +113,6 @@ export default {
     Design,Mantaj,
     Pr,Market,
     Services,Customers,
-    CustomersAbout,
     Contact, Footer
   },
 

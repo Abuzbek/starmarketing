@@ -2,7 +2,7 @@
 <section id="market">
   <v-container>
     <h2>Marketing</h2>
-    <v-row>
+    <v-row class="reverseColumn">
       <v-col data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" cols="12" md="6">
         <ul>
           <v-col>
@@ -15,7 +15,7 @@
           </v-col>
         </ul>
       </v-col>
-      <v-col data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500" cols="12" md="6">
+      <v-col class="d-flex justify-center align-center" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500" cols="12" md="6">
         <img :src="require('../assets/img/Group (4).svg')" alt=""> 
       </v-col>
     </v-row>
@@ -62,7 +62,6 @@
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
-            line-height: 21px;
             margin-bottom: 30px;
             color: #FFFFFF;
             span.spanIn{
@@ -78,6 +77,20 @@
             
         }
       }
+      }
+      @media (max-width:959px) {
+        .reverseColumn{
+          flex-direction: column-reverse;
+        }
+      }
+      @media (max-width:700px) {
+        section#market ul{
+          li{
+            .spanIn{
+              margin-left: 70px !important;
+            }
+          }
+        }
       }
       @media (max-width:600px) {
         section#market ul{

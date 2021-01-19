@@ -20,7 +20,7 @@ db.once('open', function() {
 
 // ======== mongoose connection ========
 const indexRouter = require('./routes/index');
-
+const admin = require('./routes/users');
 
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
@@ -40,6 +40,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', indexRouter);
+app.use('/yorqinjon', admin);
+
 
 if( process.env.NODE_ENV === "production" ){
 

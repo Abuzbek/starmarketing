@@ -80,6 +80,15 @@
         }
       }
       }
+      @media (max-width:700px) {
+        section#design ul{
+          li{
+            .spanIn{
+              margin-left: 70px !important;
+            }
+          }
+        }
+      }
       @media (max-width:600px) {
         section#design ul{
           margin-top:20px;

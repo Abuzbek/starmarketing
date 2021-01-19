@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.text-center Welcome to #{title}
+  .container
+    .row
+      each n,i in data
+        .col-3
+          .card
+           .card-body
+            h3 #{n.name}
+            a(href="tel:"+n.number) #{n.number}
+            h2 #{n.categories}
+            p #{n.message}
+            a(href="/yorqinjon/delete/"+n._id).btn.btn-danger Delete
